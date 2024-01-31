@@ -2,7 +2,6 @@ import os.path
 
 from skimage import segmentation, color, io
 from skimage import graph
-from matplotlib import pyplot as plt
 
 def seg(input_folder, name, output_folder):
     input_path = os.path.join(input_folder, name)
@@ -17,7 +16,4 @@ def seg(input_folder, name, output_folder):
 
     output_path = os.path.join(output_folder, name)
 
-    plt.imshow(out2)
-    plt.axis("off")
-    # plt.show()
-    plt.savefig(output_path)
+    io.imsave(output_path, out2)

@@ -31,8 +31,9 @@ def concat_and_save(input_folder, output_folder):
     high = 20000
     result = Image.new('RGB', (width, high))
 
-    for i in range(16):
-        for j in range(13):
+    # i应该是0到15共16行，j应该是0到12共13列
+    for i in range(2,13):
+        for j in range(6,13):
 
             filename = f"({i},{j}).jpg"
             input_path = os.path.join(input_folder, filename)
