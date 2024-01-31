@@ -21,13 +21,13 @@ split_and_save(raw_image, pre0+folder_name+".jpg", preprocessed_image)
 end_time1 = time.time()
 print("split completed, cost time", end_time1 - start_time)
 
-for i in range(16):
+"""for i in range(16):
     for j in range(13):
         name = f"({i},{j}).jpg"
         start_time2 = time.time()
         seg(preprocessed_image, name, processed_image)
         end_time2 = time.time()
-        print(f"miniimage({i},{j}) is segmented, cost time", end_time2 - start_time2)
+        print(f"miniimage({i},{j}) is segmented, cost time", end_time2 - start_time2)"""
 
 start_time3 = time.time()
 concat_and_save(processed_image, segmented_image)

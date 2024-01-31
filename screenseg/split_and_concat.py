@@ -34,7 +34,7 @@ def concat_and_save(input_folder, output_folder):
     for i in range(16):
         for j in range(13):
 
-            filename = f"({i}, {j}).jpg"
+            filename = f"({i},{j}).jpg"
             input_path = os.path.join(input_folder, filename)
 
             try:
